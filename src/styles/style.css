@@ -382,10 +382,6 @@ button:focus-visible {
   margin: 0 auto;
 }
 
-.npc__messages-cover {
-  order: 2;
-}
-
 .npc__messages-title {
   text-align: center;
 }
@@ -610,4 +606,35 @@ button:focus-visible {
 
 .mt-npc {
   margin-top: 2.5rem;
+}
+
+/* blink key frame  */
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+  }
+  25% {
+    opacity: 0;
+    background-color: transparent;
+  }
+}
+
+.blinking-element {
+  animation: blink 1.5s infinite;
+}
+
+.blinking-element:hover {
+  animation: none;
+}
+
+.order-1 {
+  order: 1;
+}
+
+.order-2 {
+  order: 2;
 }
