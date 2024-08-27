@@ -248,32 +248,6 @@ button:focus-visible {
   min-width: 200px;
 }
 
-/* .npc__card-decorator {
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  left: 0;
-  right: 0;
-  clip-path: circle(50% at 100% 0);
-  background: rgb(0, 56, 147);
-  background: -moz-linear-gradient(
-    0deg,
-    rgba(0, 56, 147, 1) 0%,
-    rgba(220, 20, 60, 1) 100%
-  );
-  background: -webkit-linear-gradient(
-    0deg,
-    rgba(0, 56, 147, 1) 0%,
-    rgba(220, 20, 60, 1) 100%
-  );
-  background: linear-gradient(
-    0deg,
-    rgba(0, 56, 147, 1) 0%,
-    rgba(220, 20, 60, 1) 100%
-  );
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#003893",endColorstr="#dc143c",GradientType=1);
-} */
-
 .npc__member-position {
   font-size: 1.2rem;
   line-height: 1;
@@ -298,6 +272,17 @@ button:focus-visible {
 .npc__member-name {
   font-size: 0.9rem;
   letter-spacing: 1px;
+}
+
+.npc__news {
+  width: 70%;
+}
+.npc__facebook-iframe {
+  width: 30%;
+}
+
+.npc__facebook-iframe-container {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .npc__news-header {
@@ -391,12 +376,25 @@ button:focus-visible {
 }
 
 /* message  */
+.npc__messages-container {
+  max-width: 900px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.npc__messages-cover {
+  order: 2;
+}
+
+.npc__messages-title {
+  text-align: center;
+}
 
 .npc__messages-title > h2 {
   font-size: 3rem;
   line-height: 5rem;
   color: var(--primary-color);
-  font-weight: 700;
+  font-weight: 800;
 }
 
 .npc__messages-cover-img {
@@ -481,8 +479,16 @@ button:focus-visible {
 .gap-7 {
   gap: 1.75rem;
 }
+
 .gap-8 {
   gap: 2rem;
+}
+
+.gap-9 {
+  gap: 2.5rem;
+}
+.gap-10 {
+  gap: 3rem;
 }
 
 .px-1 {
@@ -493,6 +499,10 @@ button:focus-visible {
 .px-2 {
   padding-left: 2%;
   padding-right: 2%;
+}
+
+.px-3 {
+  padding-inline: 0.75rem;
 }
 
 .py-1 {
@@ -596,4 +606,8 @@ button:focus-visible {
 
 .mt-1 {
   margin-top: 1rem;
+}
+
+.mt-npc {
+  margin-top: 2.5rem;
 }
