@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>NPC | Photo Gallery</title>
+  </head>
+  <body>
+    <div class="npc__gallery">
+      <div class="npc__gallery-nav px-2">
+        <div class="npc__gallery-nav-container">
+          <div class="npc__gallery-tabs flex">
+            <button id="tab" data-target="photos">Photos</button>
+            <button id="tab" data-target="videos">Videos</button>
+          </div>
+        </div>
+      </div>
+      <div class="npc__gallery-container px-2">
+        <!-- images tab content  -->
+        <div
+          class="tab-content-active hidden"
+          id="tab-content"
+          data-target="photos"
+        >
+          <h1 class="npc__tab-title">Photos</h1>
+          <div class="npc__gallery-cards flex gap-8">
+            <div class="npc__gallery-card">
+              <div class="npc__gallery-img">
+                <img src="./public/images/banner1.png" alt="conference" />
+              </div>
+              <div class="npc__gallery-description">
+                <h2>conferce on teaching how nepali</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- videos tab content  -->
+        <div class="hidden" id="tab-content" data-target="videos">
+          <h1 class="npc__tab-title">Videos</h1>
+          <div class="npc__gallery-cards flex gap-8">
+            <div class="npc__gallery-video-card">
+              <div class="npc__gallery-video">
+                <video controls autoplay>
+                  <source src="./public/videos/movie.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div class="npc__gallery-description">
+                <h2>conferce on teaching how nepali</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="./main.js"></script>
+    <script type="module" src="./tabs.js"></script>
+  </body>
+</html>

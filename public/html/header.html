@@ -1,0 +1,118 @@
+<header>
+  <!-- TOP NAV -->
+  <div class="npc__header-top-nav hidden lg-block">
+    <div class="npc__header-container--fluid px-2 flex justify-between">
+      <!-- contact info  -->
+      <div class="npc__header-contact flex">
+        <div
+          class="npc__header-contact-phone npc__contact-child flex items-center gap-1"
+        >
+          <span>
+            <i class="fa-solid fa-phone"></i>
+          </span>
+          <span> 9761718483 </span>
+        </div>
+        <div
+          class="npc__header-contact-email npc__contact-child flex items-center gap-1"
+        >
+          <span>
+            <i class="fa-solid fa-envelope"></i>
+          </span>
+          <span> registar@pharmacycouncil.org.np </span>
+        </div>
+      </div>
+      <!-- socail links  -->
+      <div class="npc__header-social flex items-center">
+        <a
+          class="npc_social-link npc__header-social-child"
+          href="http://facebook.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fa-brands fa-square-facebook"></i>
+        </a>
+        <a
+          class="npc_social-link npc__header-social-child"
+          href="https://twitter.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- MIDDLE NAV  -->
+  <div class="npc__header-middle-nav">
+    <div
+      class="npc__header-container--fluid px-2 flex items-center justify-between"
+    >
+      <!-- HEADER LOGO  -->
+      <div class="npc__header-logo">
+        <a href="/">
+          <div class="npc__logo-wrapper">
+            <image
+              src="../logo/npc_logo.png"
+              alt="nepal pharmacy council logo"
+            />
+          </div>
+        </a>
+      </div>
+
+      <div class="npc__nepal-flag hidden lg-block">
+        <div class="npc__nepal-flag-wrapper">
+          <img src="../images/np_flag.gif" alt="flag of nepal" />
+        </div>
+      </div>
+      <!-- MOBILE NAV TOGGLE BUTTON -->
+      <div class="header__mobile-toggle lg-hidden">
+        <!-- todo  -->
+        <div>
+          <button class="hamburger-icon" id="hamburger">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <button class="hidden cross-icon" id="cross">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- MAIN NAV  -->
+  <div
+    class="npc__header-main-nav xhidden lg:block bg-[var(--primary-color)] text-white"
+  >
+    <div class="npc__header-container px-2">
+      <nav class="flex items-center">
+        <!-- nav items  -->
+        <!-- normal link  -->
+        <div class="npc__nav-item">
+          <a class="npc__nav-btn inline-block" href="/">home</a>
+        </div>
+        <!-- dropdown sample  -->
+        <div class="npc__nav-item relative">
+          <button
+            class="npc__nav-btn npc__show-dropdown flex items-center transparent gap-1"
+          >
+            <span> about </span>
+            <span class="npc__dropdown-icon">
+              <i class="fa-solid fa-angle-down"></i>
+            </span>
+          </button>
+          <div class="npc__dropdown invisible absolute left-0 top-full">
+            <nav class="npc__dropdown-links flex flex-col">
+              <a href="/staffs" class="">Staffs</a>
+              <a href="/board-memebers" class="">Board Members</a>
+            </nav>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <!-- MOBILE NAV  -->
+  <div class="hidden">
+    <nav>
+      <h2>mobile nav</h2>
+    </nav>
+  </div>
+</header>

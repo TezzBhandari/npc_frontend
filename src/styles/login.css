@@ -1,0 +1,100 @@
+.npc__login {
+  min-height: 100vh;
+}
+
+.npc__login-form {
+  width: 50%;
+}
+
+.npc__logo {
+  width: 12rem;
+  margin-bottom: 1.5rem;
+}
+
+.npc__form-title {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 4.5rem;
+}
+
+.npc__form-input {
+  width: 280px;
+}
+
+.npc__input-container {
+  position: relative;
+}
+
+.npc__input-container > span {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0.5rem;
+}
+
+.npc__form-input > label {
+  font-size: 0.9rem;
+}
+
+.npc__input-container > input {
+  padding: 0.6rem 2rem;
+  border-radius: 4px;
+  outline: none;
+  border: 1px solid #dee2e6;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  line-height: 1.2rem;
+  width: 100%;
+}
+
+.npc__input-container > input::placeholder {
+  font-size: 0.8rem;
+  line-height: 1rem;
+}
+
+.npc__form-login-btn {
+  width: 280px;
+  background-color: var(--primary-color);
+  padding: 0.6rem 2rem;
+  color: var(--white-color);
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.npc__form-login-btn:hover {
+  background-color: rgba(0, 56, 147, 0.9);
+}
+
+.npc__cover-img {
+  /* background: rgb(0, 56, 147);
+  background: -moz-linear-gradient(
+    0deg,
+    rgba(0, 56, 147, 1) 0%,
+    rgba(220, 20, 60, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    0deg,
+    rgba(0, 56, 147, 1) 0%,
+    rgba(220, 20, 60, 1) 100%
+  );
+  background: linear-gradient(
+    0deg,
+    rgba(0, 56, 147, 1) 0%,
+    rgba(220, 20, 60, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#003893",endColorstr="#dc143c",GradientType=1); */
+  border-top-left-radius: 100px;
+  background-color: #dee2e6;
+  flex: 1;
+  min-height: 100vh;
+}
+
+.npc__login-nepal-flag {
+  transform: translateX(4rem);
+  width: 300px;
+  height: 400px;
+}

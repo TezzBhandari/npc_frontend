@@ -1,0 +1,23 @@
+@media screen and (min-width: 320px) {
+}
+
+@media screen and (min-width: 480px) {
+}
+
+@media screen and (min-width: 640px) {
+}
+
+@media screen and (min-width: 1024px) {
+  .lg-block {
+    display: block;
+  }
+  .lg-hidden {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+}
+
+@media screen and (min-width: 1440px) {
+}
