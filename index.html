@@ -13,10 +13,890 @@
       referrerpolicy="no-referrer"
     />
 
+    <link rel="stylesheet" href="./src/styles/style.css" />
+    <link rel="stylesheet" href="./src/styles/media.css" />
+
     <title>Nepal Pharmacy Council</title>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="./main.js"></script>
+    <div class="npc__notice-modal-container fixed" id="notice-modal">
+      <div class="npc__notice-container">
+        <div id="notice-container">
+          <!-- <div class="npc__notice-img-container">
+            <img src="./public/images/banner2.jpeg" alt="" />
+          </div> -->
+        </div>
+        <div class="npc__notice-close" id="close-notice">
+          <span class="flex items-center justify-center">
+            <i class="fa-solid fa-xmark"></i>
+          </span>
+        </div>
+        <div class="npc__notice-next" id="notice-next">
+          <button>Next</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="reg-modal-container" id="reg-modal" data-visible="true">
+      <div class="relative">
+        <div
+          class="reg-toggle-btn absolute left-0 flex items-center justify-center"
+          id="reg-toggle"
+        >
+          <span>
+            <i class="fa-solid fa-angles-left"></i>
+          </span>
+        </div>
+        <div class="reg-content">
+          <div class="reg-pa flex items-center justify-between gap-8">
+            <span>Total registered pharmacist assistants</span>
+            <span>12345</span>
+          </div>
+          <div class="bar"></div>
+          <div class="reg-p flex items-center justify-between gap-8">
+            <span>Total registered pharmacist</span>
+            <span>34523</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- header  -->
+    <header>
+      <!-- TOP NAV -->
+      <div class="npc__header-top-nav">
+        <div class="npc__header-container--fluid px-2 flex justify-between">
+          <!-- contact info  -->
+          <div class="npc__header-contact flex">
+            <div
+              class="npc__header-contact-phone npc__contact-child flex items-center gap-1"
+            >
+              <span>
+                <i class="fa-solid fa-phone"></i>
+              </span>
+              <span> 9761718483 </span>
+            </div>
+            <div
+              class="npc__header-contact-email npc__contact-child flex items-center gap-1"
+            >
+              <span>
+                <i class="fa-solid fa-envelope"></i>
+              </span>
+              <span> registar@pharmacycouncil.org.np </span>
+            </div>
+          </div>
+          <!-- socail links  -->
+          <div class="npc__header-social flex items-center">
+            <a
+              class="npc_social-link npc__header-social-child"
+              href="http://facebook.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fa-brands fa-square-facebook"></i>
+            </a>
+            <span> 4 shrawan, 2081 </span>
+          </div>
+        </div>
+      </div>
+      <!-- MIDDLE NAV  -->
+      <div class="npc__header-middle-nav">
+        <div
+          class="npc__header-container--fluid px-2 flex items-center justify-between"
+        >
+          <!-- HEADER LOGO  -->
+          <div class="npc__header-logo">
+            <a href="/">
+              <div class="npc__logo-wrapper">
+                <image
+                  src="../logo/npc_logo.png"
+                  alt="nepal pharmacy council logo"
+                />
+              </div>
+            </a>
+          </div>
+
+          <div class="npc__nepal-flag hidden lg-block">
+            <div class="npc__nepal-flag-wrapper">
+              <img src="../images/np_flag.gif" alt="flag of nepal" />
+            </div>
+          </div>
+          <!-- MOBILE NAV TOGGLE BUTTON -->
+          <div class="header__mobile-toggle lg-hidden">
+            <!-- todo  -->
+            <div>
+              <button class="hamburger-icon" id="hamburger">
+                <i class="fa-solid fa-bars"></i>
+              </button>
+              <button class="hidden cross-icon" id="cross">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- MAIN NAV  -->
+      <div
+        class="npc__header-main-nav xhidden lg:block bg-[var(--primary-color)] text-white"
+      >
+        <div class="npc__header-container px-2">
+          <nav class="flex items-center">
+            <!-- nav items  -->
+            <!-- normal link  -->
+            <div class="npc__nav-item">
+              <a class="npc__nav-btn inline-block" href="/">home</a>
+            </div>
+            <!-- dropdown sample  -->
+            <div class="npc__nav-item relative">
+              <button
+                class="npc__nav-btn npc__show-dropdown flex items-center transparent gap-1"
+              >
+                <span> about </span>
+                <span class="npc__dropdown-icon">
+                  <i class="fa-solid fa-angle-down"></i>
+                </span>
+              </button>
+              <div class="npc__dropdown invisible absolute left-0 top-full">
+                <nav class="npc__dropdown-links flex flex-col">
+                  <a href="/staffs" class="">Staffs</a>
+                  <a href="/board-memebers" class="">Board Members</a>
+                </nav>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <!-- MOBILE NAV  -->
+      <div class="hidden">
+        <nav>
+          <h2>mobile nav</h2>
+        </nav>
+      </div>
+    </header>
+
+    <!-- content  -->
+    <!-- announcement -->
+    <section>
+      <div class="npc__announcement-container--fluid px-2 flex">
+        <div
+          class="npc__announcement-title flex items-center justify-center py-3"
+        >
+          <h2 class="uppercase">News</h2>
+        </div>
+        <div
+          class="announcement__marquee-container flex-1 overflow-hidden flex items-center"
+        >
+          <div class="announcement__marquee inline-block whitespace-nowrap">
+            <p
+              class="announcement__marquee-content cursor-pointer flex gap-4 items-center"
+            >
+              <span class="npc__news-date">4 bhadra, 2081</span>
+              <span>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Consequatur ullam esse eveniet quam praesentium ut nisi alias
+                mollitia neque. Necessitatibus?</span
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- hero  -->
+    <section id="hero">
+      <div class="npc__hero-container--fluid px-2 py-2">
+        <div class="npc__hero-wrapper flex gap-4">
+          <!-- quick links  -->
+          <div class="npc__quick-links">
+            <div class="npc__quick-links-wrapper flex flex-col justify-between">
+              <!-- know your professional  -->
+              <a
+                href="https://nepalpharmacycouncil.org.np/kyp/public/"
+                class="npc__quick-link blinking-element flex items-center justify-between"
+              >
+                <div class="npc__quick-link-title flex">
+                  <span>
+                    <i class="fa-solid fa-book"></i>
+                  </span>
+                  <h2 class="">Know Your Pharmacist (KYP)</h2>
+                </div>
+                <span class="">
+                  <i class="fa-solid fa-bars"></i>
+                </span>
+              </a>
+              <!-- search professional  -->
+              <a
+                href="https://nepalpharmacycouncil.org.np/kyp/public/"
+                class="npc__quick-link flex items-center justify-between"
+              >
+                <div class="npc__quick-link-title flex">
+                  <span>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </span>
+                  <h2 class="">Search Professionals</h2>
+                </div>
+                <span class="">
+                  <i class="fa-solid fa-bars"></i>
+                </span>
+              </a>
+              <!-- admit card  -->
+              <a
+                href="https://nepalpharmacycouncil.org.np/kyp/public/"
+                class="npc__quick-link flex items-center justify-between"
+              >
+                <div class="npc__quick-link-title flex">
+                  <span>
+                    <i class="fa-solid fa-book"></i>
+                  </span>
+                  <h2 class="">Admit Card</h2>
+                </div>
+                <span class="">
+                  <i class="fa-solid fa-bars"></i>
+                </span>
+              </a>
+              <!-- result  -->
+              <a
+                href="https://nepalpharmacycouncil.org.np/kyp/public/"
+                class="npc__quick-link flex items-center justify-between"
+              >
+                <div class="npc__quick-link-title flex">
+                  <span>
+                    <i class="fa-solid fa-square-poll-vertical"></i>
+                  </span>
+                  <h2 class="">Result</h2>
+                </div>
+                <span class="">
+                  <i class="fa-solid fa-bars"></i>
+                </span>
+              </a>
+            </div>
+          </div>
+          <!-- image slider  -->
+          <div class="npc__image-slider">
+            <div class="slider">
+              <div class="slides">
+                <div class="slide-img">
+                  <img src="./public/images/banner1.png" alt="banner" />
+                </div>
+                <div class="slide-img">
+                  <img src="./public/images/banner2.jpeg" alt="banner" />
+                </div>
+                <div class="slide-img">
+                  <img src="./public/images/banner3.jpeg" alt="banner" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Members -->
+          <div class="npc__members">
+            <div class="npc__member-card-wrapper flex flex-col justify-between">
+              <div class="npc__member-card flex flex-col items-center gap-1">
+                <h2 class="npc__member-position">Chairman</h2>
+                <div class="npc__member-dp">
+                  <img src="../images//sanjeev.jpg" alt="sanjeev pandey" />
+                </div>
+                <p class="npc__member-name">Sanjeev Pandey</p>
+              </div>
+              <div class="npc__card-frame">
+                <div class="npc__member-card flex flex-col items-center gap-1">
+                  <h2 class="npc__member-position">Registar</h2>
+                  <div class="npc__member-dp">
+                    <img src="../images//sanjeev.jpg" alt="sanjeev pandey" />
+                  </div>
+                  <p class="npc__member-name">Sanjeev Pandey</p>
+                </div>
+                <div class="npc__card-decorator"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- news  -->
+    <section>
+      <div class="npc__container--fluid px-2 mt-npc">
+        <div class="npc__news-wrapper flex gap-8">
+          <div class="npc__news">
+            <div class="npc__news-header flex">
+              <div class="npc__news-heading">
+                <button>News</button>
+              </div>
+            </div>
+            <div class="npc__news-content">
+              <div class="npc__news-content-wrapper">
+                <div class="npc__news-item flex gap-2 py-2">
+                  <div class="npc__news-item-left">
+                    <span class="inline-block">
+                      <i class="fa-solid fa-newspaper"></i>
+                    </span>
+                  </div>
+                  <div class="npc__news-item-right">
+                    <h2>
+                      <a href="" class="npc__news-item-title">
+                        This is news title
+                      </a>
+                    </h2>
+                    <p>Agust 22, 2067</p>
+                  </div>
+                </div>
+
+                <div class="npc__news-item flex gap-2 py-2">
+                  <div class="npc__news-item-left">
+                    <span class="inline-block">
+                      <i class="fa-solid fa-newspaper"></i>
+                    </span>
+                  </div>
+                  <div class="npc__news-item-right">
+                    <h2>
+                      <a href="" class="npc__news-item-title">
+                        This is news title
+                      </a>
+                    </h2>
+                    <p>Agust 22, 2067</p>
+                  </div>
+                </div>
+
+                <div class="npc__news-item flex gap-2 py-2">
+                  <div class="npc__news-item-left">
+                    <span class="inline-block">
+                      <i class="fa-solid fa-newspaper"></i>
+                    </span>
+                  </div>
+                  <div class="npc__news-item-right">
+                    <h2>
+                      <a href="" class="npc__news-item-title">
+                        This is news title
+                      </a>
+                    </h2>
+                    <p>Agust 22, 2067</p>
+                  </div>
+                </div>
+
+                <div class="npc__news-item flex gap-2 py-2">
+                  <div class="npc__news-item-left">
+                    <span class="inline-block">
+                      <i class="fa-solid fa-newspaper"></i>
+                    </span>
+                  </div>
+                  <div class="npc__news-item-right">
+                    <h2>
+                      <a href="" class="npc__news-item-title">
+                        This is news title
+                      </a>
+                    </h2>
+                    <p>Agust 22, 2067</p>
+                  </div>
+                </div>
+
+                <div class="npc__news-item flex gap-2 py-2">
+                  <div class="npc__news-item-left">
+                    <span class="inline-block">
+                      <i class="fa-solid fa-newspaper"></i>
+                    </span>
+                  </div>
+                  <div class="npc__news-item-right">
+                    <h2>
+                      <a href="" class="npc__news-item-title">
+                        This is news title
+                      </a>
+                    </h2>
+                    <p>Agust 22, 2067</p>
+                  </div>
+                </div>
+              </div>
+              <div class="npc__read-more-wrapper">
+                <a
+                  href=""
+                  class="npc__read-more flex items-center justify-center gap-2"
+                >
+                  <span>read more</span>
+                  <span class="npc__read-more-icon">
+                    <i class="fa-solid fa-angles-right"></i>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="npc__facebook-iframe">
+            <div class="npc__facebook-iframe-container">
+              <iframe
+                src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fnepalpharmacycouncil%2F&tabs=timeline&width=370&height=400&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=true&appId"
+                width="370"
+                height="400"
+                style="border: none; overflow: hidden"
+                scrolling="no"
+                frameborder="0"
+                allowfullscreen="true"
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- about  -->
+
+    <section style="margin-top: 4rem">
+      <div class="npc__about-container--fluid px-2 mt-npc">
+        <div class="npc__about-container flex gap-8">
+          <div class="npc__about-cover">
+            <div class="npc__about-img">
+              <img src="../images/about-cover.jpg" alt="about cover image" />
+            </div>
+          </div>
+          <div class="npc__about-content">
+            <h2 class="npc__about-title">About Us</h2>
+            <div class="npc__about-description">
+              <p>
+                Nepal Pharmaceutical Association (NPA) has played a pivotal role
+                in the formation of Nepal Pharmacy Council (NPC). The NPA’s
+                exercise for preparation of draft of NPC Act took momentum after
+                implementation of National Drug Policy 1995 (B.S. 2051) that
+                clearly spelled out for the policy strategy (Section 4.4c)
+                aiming to promulgate legislative measures to register pharmacy
+                manpower engaged in the pharmacy profession. The draft prepared
+                by NPA was discussed in the national seminar entitled “Need of
+                Pharmacy Council for the Development of Pharmacy Services in
+                Nepal” on 10 April 1997 (28 Chaitra 2053) on the auspicious
+                occasion of NPA’s silver jubilee. The draft recommended by the
+                seminar was submitted to the Ministry of Health and Population
+                for further action. Read More
+              </p>
+            </div>
+            <a
+              href="/about"
+              class="npc__about-read-more mt-1 flex items-center justify-center gap-2"
+            >
+              <span>read more</span>
+              <span class="npc__about-read-more-icon">
+                <i class="fa-solid fa-angles-right"></i>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- messages -->
+    <section>
+      <div class="npc__messages-container--fluid px-2 mt-npc">
+        <div class="npc__messages-container">
+          <!-- message heading -->
+          <div style="margin-bottom: 1rem" class="npc__messages-title">
+            <h2>Messages</h2>
+          </div>
+
+          <div class="flex flex-col gap-10">
+            <div class="npc__messages-first">
+              <div class="npc__messages-first-container flex gap-8">
+                <div class="npc__messages-cover order-2">
+                  <div class="npc__messages-cover-img">
+                    <img src="../images/sanjeev.jpg" alt="sanjeev pandey" />
+                  </div>
+                  <div class="npc__message-author-info px-3 py-3">
+                    <h3 class="npc__message-author">Sanjeev Kumar Pandey</h3>
+                    <h4 class="npc__message-author-position">Registar</h4>
+                  </div>
+                </div>
+                <div class="npc__message-content">
+                  <div class="npc__message-wrapper">
+                    <p class="npc__message">
+                      Pharmacy Council was established in 2058 BS (2001 AD) with
+                      the objective of making the pharmacy profession effective
+                      through systematic and scientific operation and also for
+                      the registration of the pharmacists and pharmacy
+                      assistants as per their qualification. Health care is a
+                      basic need of people. The constitutions of Nepal states
+                      that every citizen shall have equal access to health
+                      services as their fundamental right. The concerned health
+                      personnel is now vigorously functioning in this subject to
+                      accomplish directives of the constitution to every corner
+                      of the country for the welfare of the people of Nepal. It
+                      is an opportunity for all, working in health services,
+                      including pharmacists to proceed one step forward to
+                      achieve this goal of national interest and provide sincere
+                      services to the needy people.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="npc__messages-second">
+              <div class="npc__messages-second-container flex gap-8">
+                <div class="npc__messages-cover">
+                  <div class="npc__messages-cover-img">
+                    <img src="../images/sanjeev.jpg" alt="sanjeev pandey" />
+                  </div>
+                  <div class="npc__message-author-info px-3 py-3">
+                    <h3 class="npc__message-author">Sanjeev Kumar Pandey</h3>
+                    <h4 class="npc__message-author-position">Registar</h4>
+                  </div>
+                </div>
+                <div class="npc__message-content">
+                  <div class="npc__message-wrapper">
+                    <p class="npc__message">
+                      Pharmacy Council was established in 2058 BS (2001 AD) with
+                      the objective of making the pharmacy profession effective
+                      through systematic and scientific operation and also for
+                      the registration of the pharmacists and pharmacy
+                      assistants as per their qualification. Health care is a
+                      basic need of people. The constitutions of Nepal states
+                      that every citizen shall have equal access to health
+                      services as their fundamental right. The concerned health
+                      personnel is now vigorously functioning in this subject to
+                      accomplish directives of the constitution to every corner
+                      of the country for the welfare of the people of Nepal. It
+                      is an opportunity for all, working in health services,
+                      including pharmacists to proceed one step forward to
+                      achieve this goal of national interest and provide sincere
+                      services to the needy people.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chairman card  -->
+    <section>
+      <div class="npc__chairman-cotainer--fluid px-2 mt-npc">
+        <div style="margin-bottom: 2.5rem" class="npc__chairman-title">
+          <h2>Chairman</h2>
+        </div>
+        <div class="relative">
+          <div class="npc__craousel-container">
+            <div class="npc__craousel" id="slides">
+              <div class="npc__card">
+                <div class="npc__card-img">
+                  <img src="./public/images/banner1.png" alt="" />
+                </div>
+                <div class="npc__card-description">
+                  <h3>Sanjeev Kumar Pandey</h3>
+                  <p>2004-2005</p>
+                </div>
+              </div>
+              <div class="npc__card">
+                <div class="npc__card-img">
+                  <img src="./public/images/banner2.jpeg" alt="" />
+                </div>
+                <div class="npc__card-description">
+                  <h3>Sanjeev Kumar Pandey</h3>
+                  <p>2004-2005</p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="npc__craousel-navigation npc__craousel-next"
+              id="craousel-next"
+            >
+              <span>
+                <i class="fa-solid fa-chevron-right"></i>
+              </span>
+            </div>
+            <div
+              class="npc__craousel-navigation npc__craousel-prev"
+              id="craousel-prev"
+            >
+              <span>
+                <i class="fa-solid fa-chevron-left"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer  -->
+    <footer style="margin-top: 4.5rem">
+      <div class="npc__footer-container">
+        <div class="npc__footer-container--fluid px-2 py-6">
+          <div class="npc__footer-main-content flex justify-between">
+            <div class="npc__footer-contact-info flex flex-col gap-8">
+              <!-- footer logo -->
+              <div class="footer__logo">
+                <h1 class="">Nepal Pharmacy Council</h1>
+                <div class="footer__get-in-touch flex flex-col gap-2">
+                  <p class="flex items-center gap-1">
+                    <span>
+                      <i class="fa-solid fa-phone"></i>
+                    </span>
+                    <span>977&#45;9761819535</span>
+                  </p>
+                  <p class="flex items-center gap-1">
+                    <span>
+                      <i class="fa-solid fa-location-dot"></i>
+                    </span>
+                    <span>shankhamul, kathmandu</span>
+                  </p>
+                  <p class="flex items-center gap-1">
+                    <span>
+                      <i class="fa-solid fa-envelope"></i>
+                    </span>
+                    <span>registar@pharmacycouncil.org.np</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="npc__footer-quick-links">
+              <h3>Quick Links</h3>
+              <div class="npc__footer-quick-links-container flex flex-col">
+                <a
+                  href="http://"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="npc__footer-quick-link"
+                  >Know Your Pharmacis (KYP)</a
+                >
+                <a
+                  href="http://"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="npc__footer-quick-link"
+                  >Search Professionals</a
+                >
+                <a
+                  href="http://"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="npc__footer-quick-link"
+                  >Admit Card</a
+                ><a
+                  href="http://"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="npc__footer-quick-link"
+                  >Result</a
+                >
+              </div>
+            </div>
+            <div class="npc__footer-links">
+              <h3>Links</h3>
+              <div class="npc__footer-links-container flex flex-col">
+                <a href="/" class="npc__footer-link">home</a
+                ><a href="/contact" class="npc__footer-link">contact</a
+                ><a href="/about" class="npc__footer-link">about</a>
+              </div>
+            </div>
+            <div class="npc__footer-connect flex flex-col gap-10">
+              <div class="npc__footer-connect-container">
+                <h3>Connect With Us</h3>
+                <div class="npc__footer-socials-container flex flex-col">
+                  <a href="" class="npc__footer-social flex gap-2">
+                    <span>
+                      <i class="fa-brands fa-square-facebook"></i>
+                    </span>
+                    <span>facebook</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer__copyright-content">
+            <h2 class="npc__copyright">
+              Copyright 2024, Nepal Pharmacy Council. All rights reserved.
+            </h2>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- scirpt  -->
+
+    <!-- <script type="module" src="./main.js"></script> -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const regToggle = document.getElementById("reg-toggle");
+        const regModal = document.getElementById("reg-modal");
+        regToggle.addEventListener("click", () => {
+          const visible = regModal.getAttribute("data-visible");
+          if (visible === null) {
+            regModal.setAttribute("data-visible", "true");
+            regModal.style.transform = "translateX(0)";
+          } else {
+            regModal.removeAttribute("data-visible");
+            regModal.style.transform = "translateX(100.1%)";
+          }
+        });
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        let currentSlide = 0;
+        const slides = document.querySelectorAll(".slide-img");
+        const slidesContainer = document.querySelector(".slides");
+        const totalSlides = slides.length;
+
+        // Clone the first and last slides for smooth transition effect
+        const firstClone = slides[0].cloneNode(true);
+        const lastClone = slides[totalSlides - 1].cloneNode(true);
+
+        slidesContainer.appendChild(firstClone); // Append the first slide clone at the end
+        slidesContainer.insertBefore(lastClone, slides[0]); // Insert the last slide clone at the beginning
+
+        let currentPosition = -100; // Start at the first actual slide
+        slidesContainer.style.transform = `translateX(${currentPosition}%)`;
+
+        function moveToSlide(position, transition = true) {
+          if (!transition) {
+            slidesContainer.style.transition = "none";
+          } else {
+            slidesContainer.style.transition = "transform 0.5s ease-in-out";
+          }
+          slidesContainer.style.transform = `translateX(${position}%)`;
+        }
+
+        function nextSlide() {
+          currentPosition -= 100;
+          currentSlide++;
+
+          moveToSlide(currentPosition);
+
+          // If the last slide is reached, reset to the first one after the transition
+          if (currentSlide === totalSlides) {
+            setTimeout(() => {
+              currentPosition = -100;
+              currentSlide = 0;
+              moveToSlide(currentPosition, false); // Disable transition to make the jump seamless
+            }, 500); // Wait for the transition to finish
+          }
+        }
+
+        // Auto slide
+        setInterval(nextSlide, 3000); // Change image every 3 seconds
+      });
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const data = [
+          {
+            file: "https://nepalpharmacycouncil.org.np/storage/news/1724755457.jpg",
+            type: "image",
+          },
+          {
+            file: "https://nepalpharmacycouncil.org.np/storage/syllabus/coc.pdf",
+            type: "pdf",
+          },
+        ];
+        const noticeModal = document.getElementById("notice-modal");
+        const nextNotice = document.getElementById("notice-next");
+        if (data.length === 0) {
+          noticeModal.style.display = "none";
+          return;
+        }
+
+        let currentPosition = 0;
+
+        const closeNotice = document.getElementById("close-notice");
+        const noticeContainer = document.getElementById("notice-container");
+        function addNotice(index) {
+          if (data[index].type === "pdf") {
+            noticeContainer.innerHTML = "";
+
+            // Create the embed element
+            const embed = document.createElement("embed");
+            embed.src = data[index].file; // Path to your PDF file
+            embed.type = "application/pdf";
+            embed.width = "100%";
+            embed.height = "842px";
+
+            // Append the embed element to the container
+            noticeContainer.appendChild(embed);
+            return;
+          }
+          noticeContainer.innerHTML = "";
+          // Create the div container element
+          const imgContainer = document.createElement("div");
+          imgContainer.className = "npc__notice-img-container";
+
+          // Create the image element
+          const imgElement = document.createElement("img");
+          imgElement.src = data[index].file;
+          imgElement.alt = "";
+
+          // Append the image to the container
+          imgContainer.appendChild(imgElement);
+          noticeContainer.appendChild(imgContainer);
+        }
+
+        addNotice(currentPosition);
+
+        closeNotice.addEventListener("click", () => {
+          noticeModal.style.display = "none";
+          currentPosition = 0;
+        });
+
+        nextNotice.addEventListener("click", () => {
+          currentPosition++;
+          addNotice(currentPosition);
+          showButton();
+        });
+
+        function showButton() {
+          if (currentPosition === data.length - 1) {
+            closeNotice.style.display = "block";
+            nextNotice.style.display = "none";
+          } else {
+            closeNotice.style.display = "none";
+            nextNotice.style.display = "block";
+          }
+        }
+
+        showButton();
+      });
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        let currentSlide = 0;
+        const slides = document.getElementsByClassName("npc__card");
+        const slidesContainer = document.getElementById("slides");
+        const totalSlides = slides.length;
+
+        // Clone the first and last slides for smooth transition effect
+        const firstClone = slides[0].cloneNode(true);
+        const lastClone = slides[totalSlides - 1].cloneNode(true);
+
+        slidesContainer.appendChild(firstClone); // Append the first slide clone at the end
+        slidesContainer.insertBefore(lastClone, slides[0]); // Insert the last slide clone at the beginning
+
+        let currentPosition = -100; // Start at the first actual slide
+        slidesContainer.style.transform = `translateX(${currentPosition}%)`;
+
+        function moveToSlide(position, transition = true) {
+          if (!transition) {
+            slidesContainer.style.transition = "none";
+          } else {
+            slidesContainer.style.transition = "transform 0.5s ease-in-out";
+          }
+          slidesContainer.style.transform = `translateX(${position}%)`;
+        }
+
+        function nextSlide() {
+          currentPosition -= 100;
+          currentSlide++;
+
+          moveToSlide(currentPosition);
+
+          // If the last slide is reached, reset to the first one after the transition
+          if (currentSlide === totalSlides) {
+            setTimeout(() => {
+              currentPosition = -100;
+              currentSlide = 0;
+              moveToSlide(currentPosition, false); // Disable transition to make the jump seamless
+            }, 500); // Wait for the transition to finish
+          }
+        }
+
+        // Auto slide
+        setInterval(nextSlide, 3000); // Change image every 3 seconds
+      });
+    </script>
   </body>
 </html>

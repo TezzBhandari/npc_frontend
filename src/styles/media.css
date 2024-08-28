@@ -1,23 +1,179 @@
-@media screen and (min-width: 320px) {
+@media screen and (max-width: 320px) {
+  .npc__header-top-nav {
+    display: none;
+  }
+
+  .npc__hero-wrapper {
+    flex-direction: column;
+  }
+
+  .npc__quick-links {
+    width: 90%;
+    margin-inline: auto;
+  }
+
+  .npc__image-slider {
+    width: 90%;
+    margin-inline: auto;
+  }
+  .npc__members {
+    width: 90%;
+    margin-inline: auto;
+  }
+
+  .npc__news-wrapper {
+    flex-direction: column;
+  }
+
+  .npc__news {
+    width: 90%;
+    margin-inline: auto;
+  }
+
+  .npc__facebook-iframe {
+    width: 80%;
+    margin-inline: auto;
+  }
+
+  .npc__about-container {
+    flex-direction: column;
+  }
+
+  .npc__about-container {
+    flex-direction: column;
+  }
+
+  .npc__about-cover {
+    width: 90%;
+    margin-inline: auto;
+  }
+
+  .npc__about-content {
+    width: 90%;
+    margin-inline: auto;
+  }
+
+  .npc__messages-first-container,
+  .npc__messages-second-container {
+    flex-direction: column;
+  }
+
+  .npc__messages-cover,
+  .npc__messages-cover-img {
+    width: 90%;
+    margin-inline: auto;
+  }
+
+  .npc__messages-content {
+    width: 90%;
+    margin-inline: auto;
+  }
+
+  .npc__messages-first-container {
+    flex-direction: column;
+  }
+
+  .npc__messages-cover {
+    width: 90%;
+    margin-inline: auto;
+  }
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 480px) {
+  .npc__header-top-nav {
+    display: none;
+  }
+
+  .npc__hero-wrapper {
+    flex-direction: column;
+  }
+
+  .npc__quick-links {
+    width: 90%;
+    margin-inline: auto;
+  }
+
+  .npc__image-slider {
+    width: 90%;
+    margin-inline: auto;
+  }
+  .npc__members {
+    width: 90%;
+    margin-inline: auto;
+  }
+
+  .npc__news-wrapper {
+    flex-direction: column;
+  }
+
+  .npc__news {
+    width: 90%;
+    margin-inline: auto;
+  }
+
+  .npc__facebook-iframe {
+    width: 80%;
+    margin-inline: auto;
+  }
+
+  .npc__about-container {
+    flex-direction: column;
+  }
+
+  .npc__about-container {
+    flex-direction: column;
+  }
+
+  .npc__about-cover {
+    width: 90%;
+    margin-inline: auto;
+  }
+
+  .npc__about-content {
+    width: 90%;
+    margin-inline: auto;
+  }
+
+  .npc__messages-first-container,
+  .npc__messages-second-container {
+    flex-direction: column;
+  }
+
+  .npc__messages-cover,
+  .npc__messages-cover-img {
+    width: 90%;
+    margin-inline: auto;
+  }
+
+  .npc__messages-content {
+    width: 90%;
+    margin-inline: auto;
+  }
+
+  .npc__messages-first-container {
+    flex-direction: column;
+  }
+
+  .npc__messages-cover {
+    width: 90%;
+    margin-inline: auto;
+  }
 }
 
-@media screen and (min-width: 640px) {
+@media screen and (max-width: 640px) {
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (max-width: 1024px) {
+}
+
+@media screen and (max-width: 1280px) {
+}
+
+@media screen and (max-width: 1440px) {
   .lg-block {
     display: block;
   }
   .lg-hidden {
     display: none;
   }
-}
-
-@media screen and (min-width: 1280px) {
-}
-
-@media screen and (min-width: 1440px) {
 }
