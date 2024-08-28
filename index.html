@@ -21,7 +21,7 @@
   <body>
     <div class="npc__notice-modal-container fixed" id="notice-modal">
       <div class="npc__notice-container">
-        <div id="notice-container"></div>
+        <div class="notice-container" id="notice-container"></div>
         <div class="npc__notice-close" id="close-notice">
           <span class="flex items-center justify-center">
             <i class="fa-solid fa-xmark"></i>
@@ -110,19 +110,18 @@
             </a>
           </div>
 
-          <div class="npc__nepal-flag hidden lg-block">
+          <div class="npc__nepal-flag">
             <div class="npc__nepal-flag-wrapper">
               <img src="../images/np_flag.gif" alt="flag of nepal" />
             </div>
           </div>
           <!-- MOBILE NAV TOGGLE BUTTON -->
-          <div class="header__mobile-toggle lg-hidden">
-            <!-- todo  -->
-            <div>
+          <div class="npc__header-mob-toggle">
+            <div class="npc__header-mob-toggle-icon-container">
               <button class="hamburger-icon" id="hamburger">
                 <i class="fa-solid fa-bars"></i>
               </button>
-              <button class="hidden cross-icon" id="cross">
+              <button class="cross-icon" id="cross">
                 <i class="fa-solid fa-xmark"></i>
               </button>
             </div>
@@ -130,9 +129,7 @@
         </div>
       </div>
       <!-- MAIN NAV  -->
-      <div
-        class="npc__header-main-nav xhidden lg:block bg-[var(--primary-color)] text-white"
-      >
+      <div class="npc__header-main-nav">
         <div class="npc__header-container px-2">
           <nav class="flex items-center">
             <!-- nav items  -->
@@ -614,7 +611,9 @@
             <div class="npc__footer-contact-info flex flex-col gap-8">
               <!-- footer logo -->
               <div class="footer__logo">
-                <h1 class="">Nepal Pharmacy Council</h1>
+                <div class="footer__logo-img">
+                  <img src="./public//logo/npc_logo.png" alt="" />
+                </div>
                 <div class="footer__get-in-touch flex flex-col gap-2">
                   <p class="flex items-center gap-1">
                     <span>

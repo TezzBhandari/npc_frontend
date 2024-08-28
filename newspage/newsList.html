@@ -12,7 +12,7 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="../src/styles/style.css" />
-    <link rel="stylesheet" href="./newsDetails.css" />
+    <link rel="stylesheet" href="./newList.css" />
   </head>
   <body>
     <header>
@@ -232,6 +232,9 @@
       document.addEventListener("DOMContentLoaded", () => {
         const hamburgerBtn = document.getElementById("hamburger");
         const crossBtn = document.getElementById("cross");
+        hamburgerBtn.style.display = "none";
+        crossBtn.style.display = "none";
+
         hamburgerBtn.addEventListener("click", () => {
           crossBtn.style.display = "block";
           hamburgerBtn.style.display = "none";
