@@ -151,6 +151,13 @@ button {
   letter-spacing: 0.5px;
 }
 
+.reg-p {
+  background-color: green;
+}
+.reg-pa {
+  background-color: var(--primary-color);
+}
+
 .bar {
   width: 100%;
   height: 1px;

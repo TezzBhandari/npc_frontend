@@ -21,11 +21,7 @@
   <body>
     <div class="npc__notice-modal-container fixed" id="notice-modal">
       <div class="npc__notice-container">
-        <div id="notice-container">
-          <!-- <div class="npc__notice-img-container">
-            <img src="./public/images/banner2.jpeg" alt="" />
-          </div> -->
-        </div>
+        <div id="notice-container"></div>
         <div class="npc__notice-close" id="close-notice">
           <span class="flex items-center justify-center">
             <i class="fa-solid fa-xmark"></i>
@@ -43,9 +39,7 @@
           class="reg-toggle-btn absolute left-0 flex items-center justify-center"
           id="reg-toggle"
         >
-          <span>
-            <i class="fa-solid fa-angles-left"></i>
-          </span>
+          <span id="slide-arrow-icon"> </span>
         </div>
         <div class="reg-content">
           <div class="reg-pa flex items-center justify-between gap-8">
@@ -713,14 +707,30 @@
       document.addEventListener("DOMContentLoaded", () => {
         const regToggle = document.getElementById("reg-toggle");
         const regModal = document.getElementById("reg-modal");
+        const slideArrowIcon = document.getElementById("slide-arrow-icon");
+        const iconElement = document.createElement("i");
+        iconElement.classList.add("fa-solid", "fa-angles-right");
+        slideArrowIcon.appendChild(iconElement);
+        let isOpen = true;
+
         regToggle.addEventListener("click", () => {
+          console.log("click");
           const visible = regModal.getAttribute("data-visible");
-          if (visible === null) {
-            regModal.setAttribute("data-visible", "true");
+          if (isOpen) {
+            slideArrowIcon.innerHTML = "";
+            const rightIcon = document.createElement("i");
+            rightIcon.classList.add("fa-solid", "fa-angles-right");
+            slideArrowIcon.appendChild(rightIcon);
             regModal.style.transform = "translateX(0)";
+
+            isOpen = false;
           } else {
-            regModal.removeAttribute("data-visible");
+            slideArrowIcon.innerHTML = "";
+            const leftIcon = document.createElement("i");
+            leftIcon.classList.add("fa-solid", "fa-angles-left");
+            slideArrowIcon.appendChild(leftIcon);
             regModal.style.transform = "translateX(100.1%)";
+            isOpen = true;
           }
         });
       });

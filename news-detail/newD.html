@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NPC | News Detail</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../src/styles/style.css" />
+    <link rel="stylesheet" href="./newsDetails.css" />
+    <link rel="stylesheet" href="./newD.css" />
+  </head>
+  <body>
+    <header>
+      <!-- TOP NAV -->
+      <div class="npc__header-top-nav">
+        <div class="npc__header-container--fluid px-2 flex justify-between">
+          <!-- contact info  -->
+          <div class="npc__header-contact flex">
+            <div
+              class="npc__header-contact-phone npc__contact-child flex items-center gap-1"
+            >
+              <span>
+                <i class="fa-solid fa-phone"></i>
+              </span>
+              <span> 9761718483 </span>
+            </div>
+            <div
+              class="npc__header-contact-email npc__contact-child flex items-center gap-1"
+            >
+              <span>
+                <i class="fa-solid fa-envelope"></i>
+              </span>
+              <span> registar@pharmacycouncil.org.np </span>
+            </div>
+          </div>
+          <!-- socail links  -->
+          <div class="npc__header-social flex items-center">
+            <a
+              class="npc_social-link npc__header-social-child"
+              href="http://facebook.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fa-brands fa-square-facebook"></i>
+            </a>
+            <span> 4 shrawan, 2081 </span>
+          </div>
+        </div>
+      </div>
+      <!-- MIDDLE NAV  -->
+      <div class="npc__header-middle-nav">
+        <div
+          class="npc__header-container--fluid px-2 flex items-center justify-between"
+        >
+          <!-- HEADER LOGO  -->
+          <div class="npc__header-logo">
+            <a href="/">
+              <div class="npc__logo-wrapper">
+                <image
+                  src="../logo/npc_logo.png"
+                  alt="nepal pharmacy council logo"
+                />
+              </div>
+            </a>
+          </div>
+
+          <div class="npc__nepal-flag">
+            <div class="npc__nepal-flag-wrapper">
+              <img src="../images/np_flag.gif" alt="flag of nepal" />
+            </div>
+          </div>
+          <!-- MOBILE NAV TOGGLE BUTTON -->
+          <div class="npc__header-mob-toggle">
+            <div class="npc__header-mob-toggle-icon-container">
+              <button class="hamburger-icon" id="hamburger">
+                <i class="fa-solid fa-bars"></i>
+              </button>
+              <button class="cross-icon" id="cross">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- MAIN NAV  -->
+      <div class="npc__header-main-nav">
+        <div class="npc__header-container px-2">
+          <nav class="flex items-center">
+            <!-- nav items  -->
+            <!-- normal link  -->
+            <div class="npc__nav-item">
+              <a class="npc__nav-btn inline-block" href="/">home</a>
+            </div>
+            <!-- dropdown sample  -->
+            <div class="npc__nav-item relative">
+              <button
+                class="npc__nav-btn npc__show-dropdown flex items-center transparent gap-1"
+              >
+                <span> about </span>
+                <span class="npc__dropdown-icon">
+                  <i class="fa-solid fa-angle-down"></i>
+                </span>
+              </button>
+              <div class="npc__dropdown invisible absolute left-0 top-full">
+                <nav class="npc__dropdown-links flex flex-col">
+                  <a href="/staffs" class="">Staffs</a>
+                  <a href="/board-memebers" class="">Board Members</a>
+                </nav>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <!-- MOBILE NAV  -->
+      <div class="hidden">
+        <nav>
+          <h2>mobile nav</h2>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section>
+        <div class="npc__container--fluid px-2">
+          <div class="npc__news-detail-page">
+            <div class="npc__news-detail">
+              <div class="npc__news-title">
+                <h2>News Title</h2>
+                <p>7 july, 2019</p>
+              </div>
+              <div class="npc__news-detail-container">
+                <div class="npc__news-preview">
+                  <div class="npc_pdf_container">
+                    <embed
+                      src="https://nepalpharmacycouncil.org.np/storage/syllabus/coc.pdf"
+                      type="application/pdf"
+                      width="100%"
+                      height="600px"
+                    />
+                  </div>
+                </div>
+                <div class="npc__news-additional">
+                  <div class="npc__news-content npc__add-news">
+                    <div class="npc__news-content-wrapper min-h-400px">
+                      <div class="npc__add-news-title">
+                        <h2>Additional News</h2>
+                      </div>
+                      <div class="scrollable-news">
+                        <div class="npc__news-item npc__add-news-item">
+                          <a class="npc__add-news-link" href="">
+                            <h2>This is news title</h2>
+                            <p>Agust 22, 2067</p>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const hamburgerBtn = document.getElementById("hamburger");
+        const crossBtn = document.getElementById("cross");
+        hamburgerBtn.addEventListener("click", () => {
+          crossBtn.style.display = "block";
+          hamburgerBtn.style.display = "none";
+        });
+        crossBtn.addEventListener("click", () => {
+          hamburgerBtn.style.display = "block";
+          crossBtn.style.display = "none";
+        });
+      });
+    </script>
+  </body>
+</html>
