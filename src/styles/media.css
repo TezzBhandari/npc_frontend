@@ -192,6 +192,28 @@
     flex: 1 1 0%;
     justify-content: space-around;
   }
+
+  /* registration status */
+  .reg-toggle-btn {
+    width: 1.5rem;
+    height: 2rem;
+  }
+
+  .reg-pa > span,
+  .reg-p > span {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+  }
+
+  .reg-toggle-btn span {
+    font-size: 1rem;
+  }
+
+  .reg-p,
+  .reg-pa {
+    padding: 0.5rem 0.75rem;
+  }
 }
 @media screen and (min-width: 1280px) {
 }

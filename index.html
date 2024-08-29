@@ -36,12 +36,8 @@
       </div>
     </div>
 
-    <div
-      style="display: none"
-      class="reg-modal-container"
-      id="reg-modal"
-      data-visible="true"
-    >
+    <div class="background-overlay" id="overlay"></div>
+    <div class="reg-modal-container" id="reg-modal" data-visible="true">
       <div class="relative">
         <div
           class="reg-toggle-btn absolute left-0 flex items-center justify-center"
@@ -769,6 +765,7 @@
     <!-- <script type="module" src="./main.js"></script> -->
     <script>
       document.addEventListener("DOMContentLoaded", () => {
+        const overlay = document.getElementById("overlay");
         const regToggle = document.getElementById("reg-toggle");
         const regModal = document.getElementById("reg-modal");
         const slideArrowIcon = document.getElementById("slide-arrow-icon");
@@ -777,8 +774,11 @@
         slideArrowIcon.appendChild(iconElement);
         let isOpen = true;
 
+        overlay.addEventListener("scroll", (e) => {
+          e.stopPropagation();
+        });
+
         regToggle.addEventListener("click", () => {
-          console.log("click");
           const visible = regModal.getAttribute("data-visible");
           if (isOpen) {
             slideArrowIcon.innerHTML = "";
@@ -786,7 +786,7 @@
             rightIcon.classList.add("fa-solid", "fa-angles-right");
             slideArrowIcon.appendChild(rightIcon);
             regModal.style.transform = "translateX(0)";
-
+            overlay.style.display = "block";
             isOpen = false;
           } else {
             slideArrowIcon.innerHTML = "";
@@ -794,6 +794,7 @@
             leftIcon.classList.add("fa-solid", "fa-angles-left");
             slideArrowIcon.appendChild(leftIcon);
             regModal.style.transform = "translateX(100.1%)";
+            overlay.style.display = "none";
             isOpen = true;
           }
         });
