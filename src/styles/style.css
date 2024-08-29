@@ -36,6 +36,9 @@ a {
   color: inherit;
 }
 
+i {
+  background: transparent;
+}
 p,
 span,
 i {
@@ -52,6 +55,7 @@ button {
   line-height: inherit;
   font-size: inherit;
   cursor: pointer;
+  background: transparent;
 }
 
 /* notice modal  */
@@ -169,10 +173,11 @@ button {
 }
 
 /* HEADER CSS  */
-
+/* top nav  */
 .npc__header-top-nav {
   color: var(--primary-color);
   border-bottom: 1px solid #dee2e6;
+  display: none;
 }
 
 .npc__header-container--fluid {
@@ -195,8 +200,29 @@ button {
   padding-left: 0.5rem;
 }
 
+/* mid nav  */
+.npc__container--fluid {
+  max-width: 1300px;
+  width: 95%;
+  margin-inline: auto;
+}
+
+.npc__header-middle-nav {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.npc__header-mid-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .npc__logo-wrapper {
   width: 10rem;
+}
+
+.npc__nepal-flag {
+  display: none;
 }
 
 .hamburger-icon,
@@ -204,6 +230,12 @@ button {
   font-size: 1.8rem;
   line-height: 1.5;
   color: var(--font-color);
+  background: transparent;
+  cursor: pointer;
+}
+
+.cross-icon {
+  display: none;
 }
 
 .npc__nepal-flag-wrapper {
@@ -214,6 +246,7 @@ button {
 .npc__header-main-nav {
   background-color: var(--primary-color);
   color: var(--white-color);
+  display: none;
 }
 
 .npc__nav-btn {
@@ -263,21 +296,96 @@ button {
   color: white;
 }
 
-/* news announcement  */
+/* mobile nav  */
+.npc__mob-nav {
+  position: fixed;
+  transform: translateX(-100%);
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  font-size: 1.1rem;
+  background-color: white;
+  z-index: 1000;
+  color: var(--primary-color);
+  transition: transform 300ms ease-in-out;
+}
 
+.npc__mob-nav-link {
+  padding: 0.4rem 0.5rem;
+}
+
+.npc__mob-nav-item,
+.npc__mob-dropdown-item {
+  text-transform: capitalize;
+  width: 100%;
+}
+
+.npc__mob-nav-drop-item button {
+  background: transparent;
+}
+
+.npc__mob-nav-drop-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.npc__mob-drop-right-icon,
+.npc__mob-drop-down-icon {
+  font-size: 0.8rem;
+  margin-top: 3px;
+}
+
+.npc__mob-drop-down-icon {
+  display: none;
+}
+
+.npc__mob-dropdown {
+  padding-left: 0.5rem;
+  font-size: 0.9rem;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.npc__mob-dropdown-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.npc__mob-dropdown-item {
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+}
+
+.npc__mob-dropdown-hide .npc__mob-dropdown {
+  display: none;
+}
+
+.npc__mob-dropdown-icon .npc__mob-drop-down-icon {
+  display: block;
+}
+
+.npc__mob-dropdown-icon .npc__mob-drop-right-icon {
+  display: none;
+}
+
+/* news announcement  */
 .npc__announcement-title {
-  min-width: 6rem;
+  min-width: 4rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
   letter-spacing: 1px;
   background-color: var(--secondary-color);
 }
 
 .npc__announcement-title > h2 {
   color: var(--white-color);
-  font-weight: 800;
-  font-size: 0.9rem;
+  font-weight: 700;
+  font-size: 0.8rem;
 }
 .announcement__marquee-content {
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 .announcement__marquee-content > .npc__news-date {
   color: var(--secondary-color);

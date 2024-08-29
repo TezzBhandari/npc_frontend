@@ -1,245 +1,83 @@
-.npc__header-top-nav {
-  display: block;
+@media screen and (min-width: 320px) {
 }
 
-.npc__header-mob-toggle {
-  display: none;
+@media screen and (min-width: 480px) {
 }
+@media screen and (min-width: 600px) {
+  .npc__mob-nav {
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+  }
 
-.npc__header-main-nav {
-  display: block;
+  .npc__mob-nav-link {
+    padding-left: 0.75rem;
+  }
+
+  .npc__mob-dropdown {
+    font-size: 1rem;
+  }
+
+  /* announncement  */
+  .npc__announcement-title {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
 }
+@media screen and (min-width: 768px) {
+  /* navbar  */
+  .npc__mob-nav-link {
+    padding-left: 1.25rem;
+  }
 
-.hamburger-icon,
-.cross-icon {
-  background-color: transparent;
+  /* hero  */
 }
-
-.cross-icon {
-  display: none;
-}
-
-.npc__header {
-  background-color: #e9ecef;
-  padding-left: 0.5rem;
-  margin-top: 1rem;
-}
-
-.npc__header-title > h2 {
-  font-size: 1.1rem;
-  line-height: 2.2rem;
-  color: var(--primary-color);
-}
-
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 1024px) {
+  /* nav bar  */
   .npc__header-top-nav {
-    display: none;
+    display: block;
   }
 
-  .npc__hero-wrapper {
-    flex-direction: column;
-  }
-
-  .npc__quick-links {
-    width: 90%;
-    margin-inline: auto;
-  }
-
-  .npc__image-slider {
-    width: 90%;
-    margin-inline: auto;
-  }
-  .npc__members {
-    width: 90%;
-    margin-inline: auto;
-  }
-
-  .npc__news-wrapper {
-    flex-direction: column;
-  }
-
-  .npc__news {
-    width: 90%;
-    margin-inline: auto;
-  }
-
-  .npc__facebook-iframe {
-    width: 80%;
-    margin-inline: auto;
-  }
-
-  .npc__about-container {
-    flex-direction: column;
-  }
-
-  .npc__about-container {
-    flex-direction: column;
-  }
-
-  .npc__about-cover {
-    width: 90%;
-    margin-inline: auto;
-  }
-
-  .npc__about-content {
-    width: 90%;
-    margin-inline: auto;
-  }
-
-  .npc__messages-first-container,
-  .npc__messages-second-container {
-    flex-direction: column;
-  }
-
-  .npc__messages-cover,
-  .npc__messages-cover-img {
-    width: 90%;
-    margin-inline: auto;
-  }
-
-  .npc__messages-content {
-    width: 90%;
-    margin-inline: auto;
-  }
-
-  .npc__messages-first-container {
-    flex-direction: column;
-  }
-
-  .npc__messages-cover {
-    width: 90%;
-    margin-inline: auto;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .npc__header-top-nav {
-    display: none;
-  }
-
-  .npc__hero-wrapper {
-    flex-direction: column;
-  }
-
-  .npc__quick-links {
-    width: 90%;
-    margin-inline: auto;
-  }
-
-  .npc__image-slider {
-    width: 90%;
-    margin-inline: auto;
-  }
-  .npc__members {
-    width: 90%;
-    margin-inline: auto;
-  }
-
-  .npc__news-wrapper {
-    flex-direction: column;
-  }
-
-  .npc__news {
-    width: 90%;
-    margin-inline: auto;
-  }
-
-  .npc__facebook-iframe {
-    width: 80%;
-    margin-inline: auto;
-  }
-
-  .npc__about-container {
-    flex-direction: column;
-  }
-
-  .npc__about-container {
-    flex-direction: column;
-  }
-
-  .npc__about-cover {
-    width: 90%;
-    margin-inline: auto;
-  }
-
-  .npc__about-content {
-    width: 90%;
-    margin-inline: auto;
-  }
-
-  .npc__messages-first-container,
-  .npc__messages-second-container {
-    flex-direction: column;
-  }
-
-  .npc__messages-cover,
-  .npc__messages-cover-img {
-    width: 90%;
-    margin-inline: auto;
-  }
-
-  .npc__messages-content {
-    width: 90%;
-    margin-inline: auto;
-  }
-
-  .npc__messages-first-container {
-    flex-direction: column;
-  }
-
-  .npc__messages-cover {
-    width: 90%;
-    margin-inline: auto;
-  }
-}
-
-@media screen and (max-width: 640px) {
-}
-
-@media screen and (max-width: 1024px) {
-  .npc__header-top-nav {
+  .npc__mob-nav {
     display: none;
   }
 
   .npc__nepal-flag {
-    display: none;
+    display: block;
   }
 
   .npc__header-mob-toggle {
-    display: block;
+    display: none;
   }
-
   .npc__header-main-nav {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 1280px) {
-}
-
-@media screen and (max-width: 1440px) {
-  .lg-block {
     display: block;
   }
-  .lg-hidden {
-    display: none;
+
+  /* announcement  */
+  .npc__announcement-title {
+    min-width: 6rem;
+  }
+
+  .npc__announcement-title > h2 {
+    font-weight: 800;
+    font-size: 0.9rem;
+  }
+  .announcement__marquee-content {
+    font-size: 1rem;
+  }
+
+  /* hero  */
+
+  .npc_quick-links {
+    width: 28%;
+  }
+
+  .npc__image-slider {
+    width: 55%;
+  }
+
+  .npc__members {
+    width: 17%;
   }
 }
-
-@media screen and (max-width: 320px) {
-}
-
-@media screen and (max-width: 480px) {
-}
-
-@media screen and (max-width: 640px) {
-}
-
-@media screen and (max-width: 768px) {
-}
-
-@media screen and (max-width: 1024px) {
-}
-
-@media screen and (max-width: 1280px) {
+@media screen and (min-width: 1280px) {
 }
