@@ -110,6 +110,18 @@
   .npc__member-card {
     width: 100%;
   }
+
+  /* news  */
+  .npc__news {
+    width: 68%;
+  }
+  .npc__facebook-iframe {
+    width: 32%;
+  }
+
+  .npc__news-wrapper {
+    flex-direction: row;
+  }
 }
 @media screen and (min-width: 1280px) {
 }

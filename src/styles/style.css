@@ -413,21 +413,6 @@ button {
 .npc__hero-wrapper {
   margin-top: 1rem;
 }
-/* .npc_quick-links {
-  width: 28%;
-}
-
-.npc__image-slider {
-  width: 55%;
-}
-
-.npc__members {
-  width: 17%;
-} */
-
-/* .npc__quick-links-wrapper {
-  height: 450px;
-} */
 
 .npc__quick-link {
   padding: 1.5rem 1rem;
@@ -515,15 +500,23 @@ button {
   letter-spacing: 1px;
 }
 
-.npc__news {
-  width: 70%;
-}
-.npc__facebook-iframe {
-  width: 30%;
+/* news */
+.npc__news-wrapper {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
+.npc__facebook-iframe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .npc__facebook-iframe-container {
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  max-width: 400px;
+  width: 100%;
+  /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
 }
 
 .npc__news-header {
