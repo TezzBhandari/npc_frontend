@@ -22,6 +22,15 @@
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
   }
+
+  .npc__member-dp {
+    width: 5.5rem;
+    height: 6.5rem;
+  }
+
+  .npc__member-card {
+    width: 400px;
+  }
 }
 @media screen and (min-width: 768px) {
   /* navbar  */
@@ -29,7 +38,12 @@
     padding-left: 1.25rem;
   }
 
-  /* hero  */
+  .npc__member-card-wrapper {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+  }
 }
 @media screen and (min-width: 1024px) {
   /* nav bar  */
@@ -66,6 +80,9 @@
   }
 
   /* hero  */
+  .npc__hero-wrapper {
+    flex-direction: row;
+  }
 
   .npc_quick-links {
     width: 28%;
@@ -77,6 +94,21 @@
 
   .npc__members {
     width: 17%;
+  }
+
+  .npc__quick-links-wrapper {
+    height: 450px;
+  }
+  .npc__member-card-wrapper {
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    justify-content: space-between;
+  }
+
+  .npc__member-card {
+    width: 100%;
   }
 }
 @media screen and (min-width: 1280px) {
