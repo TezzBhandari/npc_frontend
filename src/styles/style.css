@@ -147,7 +147,7 @@ button {
   cursor: pointer;
 }
 .reg-toggle-btn span {
-  font-size: 0.6rem;
+  font-size: 0.8rem;
 }
 
 .reg-p,
@@ -676,6 +676,7 @@ button {
 .npc__message-author-position {
   font-size: 0.8rem;
   font-weight: 700;
+  text-align: center;
 }
 
 /* chairman */
