@@ -135,6 +135,22 @@
   .npc__about-content {
     width: 50%;
   }
+
+  /* messages  */
+
+  .npc__messages-first-container {
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .npc__msg-cover-1 {
+    order: 2;
+  }
+
+  .npc__messages-second-container {
+    flex-direction: row;
+    gap: 2rem;
+  }
 }
 @media screen and (min-width: 1280px) {
 }

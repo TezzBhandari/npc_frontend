@@ -587,14 +587,6 @@ button {
   flex-direction: column;
 }
 
-/* .npc__about-cover {
-  width: 50%;
-}
-
-.npc__about-content {
-  width: 50%;
-} */
-
 .npc__about-cover {
   padding-inline: 0.5rem;
 }
@@ -623,6 +615,7 @@ button {
 
 .npc__messages-title {
   text-align: center;
+  margin-bottom: 1rem;
 }
 
 .npc__messages-title > h2 {
@@ -630,6 +623,24 @@ button {
   line-height: 5rem;
   color: var(--primary-color);
   font-weight: 800;
+}
+
+.npc__messages-first-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.npc__messages-second-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.npc__msg-cover-1,
+.npc__msg-cover-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .npc__messages-cover-img {
