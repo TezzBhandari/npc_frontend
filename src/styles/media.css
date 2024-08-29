@@ -122,6 +122,19 @@
   .npc__news-wrapper {
     flex-direction: row;
   }
+
+  /* about section  */
+  .npc__about-container {
+    flex-direction: row;
+  }
+
+  .npc__about-cover {
+    width: 50%;
+  }
+
+  .npc__about-content {
+    width: 50%;
+  }
 }
 @media screen and (min-width: 1280px) {
 }

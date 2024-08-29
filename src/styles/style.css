@@ -582,13 +582,18 @@ button {
 
 /* about  */
 
-.npc__about-cover {
+.npc__about-container {
+  margin-top: 2rem;
+  flex-direction: column;
+}
+
+/* .npc__about-cover {
   width: 50%;
 }
 
 .npc__about-content {
   width: 50%;
-}
+} */
 
 .npc__about-cover {
   padding-inline: 0.5rem;
